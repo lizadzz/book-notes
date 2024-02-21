@@ -1,0 +1,19 @@
+<%- include("partials/header"); -%>
+<div class="container">
+  <h1>Welcome to My Book Notes!</h1>
+  <p>Keep track of all the books you've read and organize your thoughts with our simple and intuitive book notes application. Add new books, rate them, jot down your notes, and never forget the date you read them. You can <a href="/compose">add a new book</a> or sort the book entries by <a href="#" onclick="sortBooks('rating')">rating</a> or <a href="#" onclick="sortBooks('recency')">recency</a>.</p>
+  <hr>
+
+  <% books.forEach(function(book){ %>
+  <div class="book-card">
+    <img class="book-cover" src="http://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg" alt="Book Cover">
+    <div class="book-info">
+      <h2><%= book.title %> - by <%= book.author %></h2>
+      <p>Date read: <%=book.date_read%>. Rating: <%= book.rating %>/10</p>
+      <p><%= book.notes.substring(0, 100) + " ..." %></p>
+      <a class="read-more-btn" href="/books/<%= book.id %>">Read More</a>
+    </div>
+  </div>
+  <% }) %>
+</div>
+<%- include("partials/footer"); -%>

@@ -1,0 +1,218 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #FF407D;
+}
+
+hr {
+  border-top: 1px solid #211951;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+li {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.book-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.read-more-btn {
+  color: #FFCAD4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.book-details {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-details img {
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.edit-button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: #C9D7DD;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-button:hover {
+  background-color: #1B3C73;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: #C9D7DD;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  background-color: #FF407D;
+}
+
+input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #FF407D !important;
+}
+
+.create-post a {
+  background-color: #C9D7DD;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #f4f4f4;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #3D3B40;
+}
+
+/* Container for the edit form */
+.edit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Title input field */
+.edit-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Content textarea */
+.edit-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Save Changes button */
+.edit-container button {
+  padding: 10px 20px;
+  background-color: #C9D7DD;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit-container button:hover {
+  background-color: #FFCAD4;
+}

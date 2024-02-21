@@ -1,0 +1,35 @@
+<%- include("partials/header"); -%>
+<form class="" action="/compose" method="post">
+  <div class="edit-container">
+    <h1>New book</h1>
+    <label>Title</label>
+    <input class="form-control" type="text" name="title">
+    <label>Author</label>
+    <input class="form-control" type="text" name="author">
+    <label>ISBN (check it <a href="https://openlibrary.org">here</a>)</label>
+    <input class="form-control" type="text" name="isbn" id="isbn" onchange="fetchBookCover()">
+    <label>Date read (DD/MM/YYYY)</label>
+    <input class="form-control" type="text" name="date_read">
+    <label>Rating (0-10)</label>
+    <input class="form-control" type="text" name="rating">
+    <label>Notes</label>
+    <textarea class="form-control" name="notes" rows="5" cols="30"></textarea>
+    <label>Cover URL</label>
+    <img id="coverImage" src="" alt="Book Cover" style="max-width: 200px;">
+    <button type="submit" name="button">Publish</button>
+  </div>
+</form>
+
+<script>
+  function fetchBookCover() {
+    const isbn = document.getElementById('isbn').value;
+    const coverImage = document.getElementById('coverImage');
+    if (isbn) {
+      coverImage.src = `http://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`;
+    } else {
+      coverImage.src = ''; // Clear the image if no ISBN is provided
+    }
+  }
+  </script>
+  
+<%- include("partials/footer"); -%>

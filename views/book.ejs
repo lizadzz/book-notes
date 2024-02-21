@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+<link rel="stylesheet" href="/styles.css">
+
+<div class="container">
+  <div class="book-details">
+    <img class="book-cover" src="http://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg" alt="Book Cover">
+    <div class="book-info">
+      <h1><%= book.title %> - by <%= book.author %></h1>
+      <p>ISBN: <%= book.isbn %></p>
+      <p>Date read: <%= book.date_read %></p>
+      <p>Rating: <%= book.rating %>/10</p>
+      <h2>NOTES</h2>
+      <p><%= book.notes %></p>
+    </div>
+  </div>
+  <br>
+  <form action="/delete" method="post">
+    <input type="hidden" name="deleteBookId" value="<%= book.id %>">
+    <button type="submit" class="delete-button">Delete Book</button>
+    <button type="button" onclick="window.location.href='/books/<%= book.id %>/edit'" class="edit-button">Edit Book</button>
+  </form>  
+</div>
+<%- include("partials/footer"); -%>

@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+
+<div class="edit-container">
+  <h1>Edit Book</h1>
+  <form action="/update" method="post">
+    <input type="hidden" name="editBookId" value="<%= book.id %>">
+    <label>Title</label>
+    <input type="text" name="editTitle" value="<%= book.title %>">
+    <label>Author</label>
+    <input type="text" name="editAuthor" value="<%= book.author %>">
+    <label>ISBN</label>
+    <input type="text" name="editIsbn" value="<%= book.isbn %>">
+    <label>Date read</label>
+    <input type="text" name="editDateRead" value="<%= book.date_read %>">
+    <label>Rating</label>
+    <input type="text" name="editRating" value="<%= book.rating %>">
+    <label>Notes</label>
+    <textarea name="editNotes"><%= book.notes %></textarea>
+    <label>Cover URL</label>
+    <input type="text" name="editCoverUrl" value="<%= book.cover_url %>">
+    <button type="submit" class="create-post">Save Changes</button>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>
